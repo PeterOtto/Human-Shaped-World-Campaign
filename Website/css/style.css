@@ -1,0 +1,9 @@
+#demo{
+	position: absolute;
+    text-align: center;
+    margin: -50% auto 0 auto;
+    width: 100%;
+    color: white;
+    font-size: 4em;
+    display: block;
+}
