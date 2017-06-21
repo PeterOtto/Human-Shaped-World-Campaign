@@ -10,18 +10,175 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- My style -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Planetary.js -->
     <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
     <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
     <script type='text/javascript' src='js/planetaryjs.js'></script>
-  </head>
-  <body>
-    <canvas id='planet' width='1200' height='1200'></canvas>
-    <p id="demo"></p>
+    </head>
+    <body>
+    <div id="intro">
+        <div id="introText">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 552 538" style="enable-background:new 0 0 552 538;" xml:space="preserve">
+                <g>
+                    <defs>
+                        <rect id="SVGID_1_" x="347" y="450" width="151" height="38"/>
+                    </defs>
+                    <clipPath id="yellowRect">
+                        <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g class="yellowRect">
+                        <defs>
+                            <rect id="SVGID_3_" width="552" height="538"/>
+                        </defs>
+                        <clipPath id="SVGID_4_">
+                            <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+                        </clipPath>
+                        <rect x="342" y="445" class="yellowRect" width="161" height="48"/>
+                    </g>
+                </g>
+                <g>
+                    <defs>
+                        <polygon id="2line" points="479,22 497.6,22 157,396.1 139,396.1      "/>
+                    </defs>
+                    <clipPath id="SVGID_6_">
+                        <use xlink:href="#2line"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g class="secondLine">
+                        <defs>
+                            <rect id="SVGID_7_" width="552" height="538"/>
+                        </defs>
+                        <clipPath id="SVGID_8_">
+                            <use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+                        </clipPath>
+                        
+                            <rect x="54.8" y="186.9" transform="matrix(0.6428 -0.766 0.766 0.6428 -46.4385 318.4913)" class="secondLineClip" width="527" height="44.2"/>
+                    </g>
+                </g>
+                <g>
+                    <defs>
+                        <polygon id="SVGID_9_" points="421,22 439.6,22 99,396.1 81,396.1        "/>
+                    </defs>
+                    <clipPath id="SVGID_10_">
+                        <use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g class="firstLine">
+                        <defs>
+                            <rect id="SVGID_11_" width="552" height="538"/>
+                        </defs>
+                        <clipPath id="SVGID_12_">
+                            <use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+                        </clipPath>
+                        
+                            <rect x="-3.2" y="186.9" transform="matrix(0.6428 -0.766 0.766 0.6428 -67.1567 274.0608)" class="firstLineClip" width="527" height="44.2"/>
+                    </g>
+                </g>
+                <g>
+                    <defs>
+                        <path id="SVGID_13_" d="M159,120h67.9v46.4v2.8c0,18.8-15.2,34-34,34c-18.8,0-34-15.2-34-34v-2.4V120z"/>
+                    </defs>
+                    <clipPath id="SVGID_14_">
+                        <use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g class="uShapePath">
+                        <defs>
+                            <rect id="SVGID_15_" width="552" height="538"/>
+                        </defs>
+                        <clipPath id="SVGID_16_">
+                            <use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+                        </clipPath>
+                        <rect x="154" y="115" class="uShape" width="77.9" height="93.1"/>
+                    </g>
+                </g>
+                <g>
+                    <defs>
+                        <rect id="SVGID_17_" width="552" height="538"/>
+                    </defs>
+                    <clipPath id="SVGID_18_">
+                        <use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g class="humanShapedTextClip">
+                        <text transform="matrix(1 0 0 1 38.9878 209)" class="humanShapedText">Human</text>
+                    </g>
+                    <g class="humanShapedTextClip">
+                        <text transform="matrix(1 0 0 1 20.3179 353)" class="humanShapedText">Shaped</text>
+                    </g>
+                    <g class="humanShapedTextClip">
+                        <text transform="matrix(1 0 0 1 80.1938 497)" class="humanShapedText">World</text>
+                    </g>
+                </g>
+            </svg>
+            <button id="exploreBtn">Explore</button>
+        </div>
+    </div>
+
+    <div id="menu">
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Explore </h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Our Mission</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Our Process</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Create campaign</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Join the movement</h1></a>
+    </div>
+
+    <div id="header" class=".container-fluid">
+        <div class="row">
+            <div id="nav-icon" class="col-xs-1 col-xs-offset-1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div id="join" class="col-xs-2 col-xs-offset-8 text-center">
+                <p>Join</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popUp" class=".container-fluid">
+        <div class="row">
+            <div id="headerImg" class="col-xs-12">
+                <img src="img/lufthansa_img.png">
+            </div>
+
+            <div id="content" class="col-xs-12">
+                <h2 id="category">Transportation</h2>
+                <h1 id="mainText">Monday morning queues at MUC Airport</h1>
+                <h3 id="location"> <i class="fa fa-map-marker" aria-hidden="true"></i> Munich, Germany</h3>
+                <img id="members" class="img-responsive center-block" src="img/members.png">
+                <img id="progress" class="img-responsive center-block" src="img/progress.png">
+            </div>
+        </div>
+    </div>
+
+    <canvas id='planet'></canvas>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/globe.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav-icon').click(function(){
+                $('#nav-icon').toggleClass('open');
+                $('#menu').toggleClass('open');
+            });
+
+            $('#menu').click(function(){
+                $('#nav-icon').toggleClass('open');
+                $('#menu').toggleClass('open');
+            });
+
+            $('#exploreBtn').click(function(){
+                $( "#intro" ).fadeTo( "slow" , 0, function() {
+                    $( '#header' ).fadeTo( "slow", 1 ).delay(1000);
+                    $('#intro').toggleClass('hide').delay(2000);
+                });
+            });
+        });
+    </script>
   </body>
 </html>
