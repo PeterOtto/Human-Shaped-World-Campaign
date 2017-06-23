@@ -18,6 +18,9 @@
     <script type='text/javascript' src='js/planetaryjs.js'></script>
     </head>
     <body>
+    <div id="whiteOverlay">
+    </div>
+
     <div id="intro">
         <div id="introText">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -148,7 +151,15 @@
                 <h1 id="mainText">Monday morning queues at MUC Airport</h1>
                 <h3 id="location"> <i class="fa fa-map-marker" aria-hidden="true"></i> Munich, Germany</h3>
                 <img id="members" class="img-responsive center-block" src="img/members.png">
-                <img id="progress" class="img-responsive center-block" src="img/progress.png">
+                <div id="progress" class="col-xs-12">
+                    <p id="progressAmount" class="col-xs-5 no-padding">25% complete</p>
+                    <p id="nextPhase" class="col-xs-7 no-padding">4 days until phase 3</p>
+                    <div class="progress col-xs-12 no-padding">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                        </div>
+                    </div>
+                    <button type="button" id="leanMoreBtn" class="btn btn-block">Learn more</button>
+                </div>
             </div>
         </div>
     </div>
@@ -177,6 +188,15 @@
                     $( '#header' ).fadeTo( "slow", 1 ).delay(1000);
                     $('#intro').toggleClass('hide').delay(2000);
                 });
+            });
+
+            $('#leanMoreBtn').click(function(){
+                $( "#popUp" ).css( "display", "none");
+                $( "#whiteOverlay" ).css( "visibility", "visible");
+                $("#whiteOverlay").fadeTo( 2000 , 1 ).delay(1000);
+                setInterval(function() {
+                    window.location.href = 'lufthansa.html';
+                }, 3000);
             });
         });
     </script>

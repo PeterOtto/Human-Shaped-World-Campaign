@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="white">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Human Shaped-World Campaign</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- My style -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Planetary.js -->
+    <script type='text/javascript' src='js/d3.v3.min.js'></script>
+    <script type='text/javascript' src='js/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='js/planetaryjs.js'></script>
+    </head>
+    <body class="white">
+
+    <div id="menu">
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Explore </h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Our Mission</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Our Process</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Create campaign</h1></a>
+        <a href="#"><h1><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Join the movement</h1></a>
+    </div>
+
+    <div id="header" class=".container-fluid">
+        <div class="row">
+            <div id="nav-icon" class="col-xs-1 col-xs-offset-1">
+              <span class="black"></span>
+              <span class="black"></span>
+              <span class="black"></span>
+              <span class="black"></span>
+            </div>
+
+            <div id="join" class="col-xs-2 col-xs-offset-8 text-center">
+                <p>Join</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectHeader" style="display: none" class=".container-fluid">
+        <div class="row">
+            <div id="projectText" class="col-xs-5 col-xs-offset-1">
+                <h2 id="projectCategory">Transportation</h2>
+                <h1 id="projectHeadline">Monday morning queues at MUC Airport</h1>
+                <h3 id="projectLocation"> <i class="fa fa-map-marker" aria-hidden="true"></i> Munich, Germany</h3>
+                <div id="projectMembers" class="row">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/34.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/73.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/74.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/35.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/75.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/36.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/76.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/37.jpg">
+                    <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/77.jpg">
+                    <p class="bottom-align-text  col-xs-1 text-left">See all</p>
+                </div>
+                <div id="projectBtn" class="row">
+                    <button type="button" class="btn col-xs-4">Join the group</button>
+                    <button type="button" class="btn col-xs-4 col-xs-offset-1">Follow the project</button>
+                </div>
+            </div>
+
+            <div id="projectImage" class="col-xs-5">
+                <img class="img-responsive center-block" src="img/@2x_lufthansa_img.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="projectContent" style="display: none" class=".container-fluid carousel slide" data-ride="carousel" data-interval="false">
+        <div class="row" >
+            <div class="col-xs-2 col-xs-offset-1">
+                <div id="contentMenu" class="row carousel-indicators">
+                    <a href="#" class="active"><p class="col-xs-12" data-target="#projectContent" data-slide-to="0" >About the project<div class="offsetBg"></div></p></a>
+                    <a href="#" class=""><p class="col-xs-12" data-target="#projectContent" data-slide-to="1">Timeline<div class="offsetBg"></div></p></a>
+                    <a href="#" class=""><p class="col-xs-12" data-target="#projectContent" data-slide-to="2">Comments<div class="offsetBg"></div></p></a>
+                </div>
+            </div>
+
+            <div class=" col-xs-8 carousel-inner active">
+                <div id="aboutProject" class="col-xs-12 item active">
+                    <div class="row ">
+                        <p class="col-xs-10">
+                            Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <p class="col-xs-10">
+                            Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+                        </p>
+                        <div id="aboutImages" class="row col-xs-6">
+                            <img class="col-xs-4 img-responsive" src="https://www.bavaria.by/www.bavaria.by/data/mediadb/cms_pictures/%7B52459e7a-e514-5664-83ce-e617c81fca87%7D.jpeg">
+                            <img class="col-xs-4 img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Munich_airport_2.jpg/220px-Munich_airport_2.jpg">
+                            <img class="col-xs-4 img-responsive" src="http://static.thousandwonders.net/Munich.Airport.original.5911.jpg">
+                            <div id="progress" class="col-xs-12">
+                                <p id="progressAmount" class="col-xs-5 no-padding">25% complete</p>
+                                <p id="nextPhase" class="col-xs-7 no-padding">4 days until phase 3</p>
+                                <div class="progress col-xs-12 no-padding">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="jumbotron col-xs-6">
+                            <p>Next Event</p>
+                            <h3>Kickoff for Phase 3  - Let's start ideation with some brainstorming</h3>
+                            <p><i class="fa fa-clock-o" aria-hidden="true"></i> Tuesday, 14th of june 2017</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Designt Office, Steinerstrasse 15F, Munich</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="projectTimeline" class="col-xs-12 item">
+                    <div class="row">
+                        <div id="timelineNav">
+                            <div class="col-xs-3 isActive">
+                                <a href="#">
+                                    <h1 class="research current">01</h1>
+                                    <p>Research</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 isActive ">
+                                <a href="#">
+                                    <h1 class="ideation">02</h1>
+                                    <p>Ideation</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 isNot-active">
+                                <a href="#">
+                                    <h1>03</h1>
+                                    <p>Conceptualising</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 isNot-active">
+                                <a href="#">
+                                    <h1>04</h1>
+                                    <p>Prototyping</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 isNot-active">
+                                <a href="#">
+                                    <h1>05</h1>
+                                    <p>Finalising</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="timelineContent">
+
+                        <div id="research">
+                                <div class="row">
+                                    <div class="row col-xs-6">
+                                        <h4 class="col-xs-12">
+                                            <small>
+                                                Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                            </small>
+                                        </h4>
+
+                                        <p class="col-xs-12">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i> Four documents uploaded
+                                        </p>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_paper.png">
+                                            <p class="text-center">Interview #1 Transcript</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_paper.png">
+                                            <p class="text-center">Interview #2 Transcript</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_pdf.png">
+                                            <p class="text-center">Research findings</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_pdf.png">
+                                            <p class="text-center">Research presentation</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="jumbotron col-xs-6">
+                                        <h3>Goals for the Research Phase</h3>
+                                        <ul>
+                                            <li><i class="fa fa-check"></i> Do some research</li>
+                                            <li><i class="fa fa-check"></i> Write things on post-it's</li>
+                                            <li><i class="fa fa-check"></i> Do some interviews</li>
+                                            <li><i class="fa fa-check"></i> Write on more post-it's</li>
+                                            <li><i class="fa fa-check"></i> Drink a lot of coffee</li>
+                                            <li><i class="fa fa-check"></i> Upload all research findings</li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="timelineLine" class="row col-xs-12">
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 line1">
+                                                <h3>Add entry</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 line2">
+                                                <h3>Do desk research</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1">
+                                                <h3>Great first interview</h3>
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                                                <p class="col-xs-3">Jon Ampersand</p>
+                                                <i class="col-xs-1 fa fa-comment-o" aria-hidden="true"></i>
+                                                <p class="col-xs-4">6 comments</p>
+                                                <p class="col-xs-12">
+                                                    Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.
+                                                </p>
+                                                <p class="col-xs-12 readMore">
+                                                    Continue reading
+                                                </p>
+
+                                                <p class="col-xs-12 attached">
+                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                                    One documents attached
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1">
+                                                <h3>Amazing second interview</h3>
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                                                <p class="col-xs-3">Jon Ampersand</p>
+                                                <i class="col-xs-1 fa fa-comment-o" aria-hidden="true"></i>
+                                                <p class="col-xs-4">6 comments</p>
+                                                <p class="col-xs-12">
+                                                    Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.
+                                                </p>
+                                                <p class="col-xs-12 readMore">
+                                                    Continue reading
+                                                </p>
+
+                                                <p class="col-xs-12 attached">
+                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                                    One documents attached
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="yellow fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 people">
+                                                <h3>Start of the ideation phase</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div id="ideation">
+                                <div class="row">
+                                    <div class="row col-xs-6">
+                                        <h4 class="col-xs-12">
+                                            <small>
+                                                Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                            </small>
+                                        </h4>
+
+                                        <p class="col-xs-12">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i> Two documents uploaded
+                                        </p>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_paper.png">
+                                            <p class="text-center">Workshop Transcript</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                        <div class="col-xs-3 uploadDocs">
+                                            <img class="img-responsive center-block" src="img/icons/doc_pdf.png">
+                                            <p class="text-center">How might we questions</p>
+                                            <p class="text-center">4.05.2017 18:01</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="jumbotron col-xs-6">
+                                        <h3>Goals for the Ideation Phase</h3>
+                                        <ul>
+                                            <li><i class="fa fa-check"></i> Conduct an ideation workshop</li>
+                                            <li><i class="fa fa-check"></i> Come up with 5-10 HMWs</li>
+                                            <li><i class="fa fa-check"></i> Vote for the most releavnt HMWs</li>
+                                            <li><i class="fa fa-circle-thin"></i> Generate ideas based on HMW</li>
+                                            <li><i class="fa fa-circle-thin"></i> Vote for the best ideas</li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="timelineLine" class="row col-xs-12">
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 line1">
+                                                <h3>Add entry</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 line2">
+                                                <h3>Vote for the most relevant HMWs</h3>
+                                                <p class="col-xs-4">Only 2 days left to vote</p>
+                                                <button type="button" class="btn col-xs-2">Vote now</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1">
+                                                <h3>Great workshop - Have a look at the results here</h3>
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                                                <p class="col-xs-3">Jon Ampersand</p>
+                                                <i class="col-xs-1 fa fa-comment-o" aria-hidden="true"></i>
+                                                <p class="col-xs-4">6 comments</p>
+                                                <p class="col-xs-12">
+                                                    Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.
+                                                </p>
+                                                <p class="col-xs-12 readMore">
+                                                    Continue reading
+                                                </p>
+
+                                                <p class="col-xs-12 attached">
+                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                                    Two documents attached
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 people">
+                                                <h3>Next Workshop @ Designit in Munich 14th of June 2017</h3>
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/33.jpg">
+                                                <img class="center-block img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/72.jpg">
+                                                <i class="fa fa-plus-circle col-xs-1" aria-hidden="true"></i>
+                                                <button type="button" class="btn col-xs-2 col-xs-offset-1">I'm joining</button>
+                                                <p class="col-xs-12 readMore">15 people are joining</p>
+                                                <p class="col-xs-12 comment"><i class="fa fa-comment-o" aria-hidden="true"></i> 6 comments</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div id="dotLine" class="col-xs-1 text-center">
+                                                <i class="yellow fa fa-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="dotText" class="col-xs-10 col-xs-offset-1 people">
+                                                <h3>Start of the Conceptualising phase</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="projecComments" class="col-xs-12 item">
+                    <div class="panel panel-default col-xs-10">
+                      <div class="panel-heading">
+                            <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                            <p class="col-xs-3">Jon Ampersand</p>
+                      </div>
+                      <div class="panel-body">
+                        <p>
+                            Meggings cred before they sold out messenger bag, ugh fashion axe Pitchfork tousled free asymmetrical literally twee Thundercats. 90's pickled actually biodiesel put a bird on it, butcher dreamcatcher.
+                        </p>
+                        <p class="panel-data">
+                          <i class="fa fa-heart-o" aria-hidden="true"></i> 556 likes | 2 responses  
+                        </p>
+                        <div class="panel-comments">
+                            <div class="panel-comments-user">
+                                <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/6.jpg">
+                                <p class="col-xs-3 no-padding">Fred Hughes</p>
+                                <p class="col-xs-12">Thanks Jon for your comment! I totally agree to the butcher dreamcatcher Cosby sweater.</p>
+                            </div>
+                        </div>
+
+                        <div class="panel-comments">
+                            <div class="panel-comments-user">
+                                <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/96.jpg">
+                                <p class="col-xs-3 no-padding">Jill Hill</p>
+                                <p class="col-xs-12">What do you mean by twee Thundercats?</p>
+
+                                <div class="panel-comments col-xs-offset-1">
+                                    <div class="panel-comments-user">
+                                        <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                                        <p class="col-xs-3 no-padding">Jon Ampersand</p>
+                                        <p class="col-xs-12">Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer.</p>
+                                    </div>
+                                </div>
+
+                                <div class="panel-comments col-xs-offset-1">
+                                    <div class="panel-comments-user">
+                                        <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/women/96.jpg">
+                                        <p class="col-xs-3 no-padding">Jill Hill</p>
+                                        <p class="col-xs-12">Ah now i got it. Thanks :)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default col-xs-10">
+                      <div class="panel-heading">
+                            <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/73.jpg">
+                            <p class="col-xs-3">Jamie Cox</p>
+                      </div>
+                      <div class="panel-body">
+                        <p>
+                           Bushwick meh Blue Bottle pork belly mustache skateboard 3 wolf moon. Actually beard single-origin coffee, twee 90's PBR Echo Park sartorial try-hard freegan Portland ennui. Selvage jean shorts 90's, Vice American Apparel try-hard food truck Shoreditch fap lomo Wes Anderson. Art party Thundercats High Life Tumblr, sartorial vinyl deep v fixie McSweeney's fap tous.
+                        </p>
+                        <p class="panel-data">
+                          <i class="fa fa-heart-o" aria-hidden="true"></i> 556 likes | 2 responses  
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default col-xs-10">
+                      <div class="panel-heading">
+                            <img class="img-circle col-xs-1" src="https://randomuser.me/api/portraits/men/72.jpg">
+                            <p class="col-xs-3">Jon Ampersand</p>
+                      </div>
+                      <div class="panel-body">
+                        <p>
+                           Meggings cred before they sold out messenger bag, ugh fashion axe Pitchfork tousled free asymmetrical literally twee Thundercats. 90's pickled actually biodiesel put a bird on it, butcher dreamcatcher Cosby sweater.
+                        </p>
+                        <p class="panel-data">
+                          <i class="fa fa-heart-o" aria-hidden="true"></i> 556 likes | 2 responses  
+                        </p>
+                      </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $( '#header' ).fadeTo( 0 , 1 );
+            $( "#projectHeader" ).fadeIn( 2000 );
+            $( "#projectContent" ).fadeIn( 2000 );
+
+            $('#nav-icon').click(function(){
+                $('#nav-icon').toggleClass('open');
+                $('#menu').toggleClass('open');
+            });
+
+            $('#menu').click(function(){
+                $('#nav-icon').toggleClass('open');
+                $('#menu').toggleClass('open');
+            });
+
+            $( ".ideation" ).click(function() {
+                $( "#research" ).fadeOut( 500, function() {
+                $( "#ideation" ).fadeIn( 500 );
+                $('.ideation').toggleClass('current');
+                $('.research').removeClass('current');
+              });
+            });
+
+            $( ".research" ).click(function() {
+                $( "#ideation" ).fadeOut( 500, function() {
+                $( "#research" ).fadeIn( 500 );
+                $('.research').toggleClass('current');
+                $('.ideation').removeClass('current');
+              });
+            });
+        });
+    </script>
+  </body>
+</html>
